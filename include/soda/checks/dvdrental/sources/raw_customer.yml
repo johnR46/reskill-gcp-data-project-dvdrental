@@ -1,0 +1,27 @@
+checks for raw_customer:
+  - schema:
+      fail:
+        when required column missing:
+          [
+            customer_id,
+            store_id,
+            first_name,
+            last_name,
+            email,
+            address_id,
+            activebool,
+            create_date,
+            last_update,
+            active
+          ]
+        when wrong column type:
+          customer_id: INTEGER
+          store_id: INTEGER
+          first_name: STRING
+          last_name: STRING
+          email: STRING
+          address_id: INTEGER
+          activebool: BOOL
+          create_date: DATE
+          last_update: TIMESTAMP
+          active: INTEGER

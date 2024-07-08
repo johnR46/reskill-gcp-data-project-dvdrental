@@ -1,0 +1,8 @@
+checks for raw_language:
+  - schema:
+      fail:
+        when required column missing: [language_id, name, last_update]
+        when wrong column type:
+          language_id: INTEGER
+          name: STRING
+          last_update: TIMESTAMP

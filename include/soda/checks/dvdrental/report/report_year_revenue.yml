@@ -1,0 +1,7 @@
+checks for report_year_revenue:
+  - min(num_title):
+      fail: when <= 0
+  - min(month):
+      fail: when <= 0
+  - max(month):
+      fail: when > 12

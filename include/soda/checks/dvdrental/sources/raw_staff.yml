@@ -1,0 +1,25 @@
+checks for raw_staff:
+  - schema:
+      fail:
+        when required column missing:
+          [
+            staff_id,
+            first_name,
+            last_name,
+            address_id,
+            email,
+            store_id,
+            active,
+            username,
+            last_update,
+          ]
+        when wrong column type:
+          staff_id: INTEGER
+          first_name: STRING
+          last_name: STRING
+          address_id: INTEGER
+          email: STRING
+          store_id: INTEGER
+          active: BOOL
+          username: STRING
+          last_update: TIMESTAMP

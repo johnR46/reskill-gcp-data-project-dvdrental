@@ -1,0 +1,12 @@
+checks for dim_customer:
+  - schema:
+      fail:
+        when required column missing:
+          [customer_key, customer_id]
+        when wrong column type:
+          customer_key: INTEGER
+          customer_id: INTEGER
+  - duplicate_count(customer_key) = 0:
+      name: All customers are unique
+  - missing_count(customer_key) = 0:
+      name: All customers have a key

@@ -1,0 +1,7 @@
+checks for report_revenue:
+  - missing_count(title) = 0:
+      name: All revenue have a title
+  - min(month):
+      fail: when <= 0
+  - max(month):
+      fail: when > 12

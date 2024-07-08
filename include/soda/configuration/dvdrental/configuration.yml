@@ -1,0 +1,10 @@
+data_source dvdrental:
+  type: bigquery
+  connection:
+    account_info_json_path: /usr/local/airflow/include/gcp/deep-equator-427111-t7-dfe5accd5ee2.json
+    auth_scopes:
+    - https://www.googleapis.com/auth/bigquery
+    - https://www.googleapis.com/auth/cloud-platform
+    - https://www.googleapis.com/auth/drive
+    project_id: 'deep-equator-427111-t7'
+    dataset: dvdrental

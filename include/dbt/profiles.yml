@@ -1,0 +1,12 @@
+dvdrental:
+ target: dev
+ outputs:
+  dev:
+    type: bigquery
+    method: service-account
+    keyfile: /usr/local/airflow/include/gcp/deep-equator-427111-t7-dfe5accd5ee2.json
+    project: deep-equator-427111-t7
+    dataset: dvdrental
+    threads: 1
+    timeout_seconds: 300
+    location: US

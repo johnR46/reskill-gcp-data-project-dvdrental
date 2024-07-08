@@ -1,0 +1,10 @@
+checks for raw_store:
+  - schema:
+      fail:
+        when required column missing:
+          [store_id, manager_staff_id, address_id, last_update]
+        when wrong column type:
+          store_id: INTEGER
+          manager_staff_id: INTEGER
+          address_id: INTEGER
+          last_update: TIMESTAMP

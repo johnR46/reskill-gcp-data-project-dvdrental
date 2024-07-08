@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: dvdrental
+    database: deep-equator-427111-t7 # Put the project id!
+    
+    tables:
+      - name: raw_address
+      - name: raw_city
+      - name: raw_country
+      - name: raw_customer
+      - name: raw_film
+      - name: raw_inventory
+      - name: raw_language
+      - name: raw_payment
+      - name: raw_staff
+      - name: raw_store
+      - name: raw_rental

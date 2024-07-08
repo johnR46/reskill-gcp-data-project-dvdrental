@@ -1,0 +1,9 @@
+checks for raw_city:
+  - schema:
+      fail:
+        when required column missing: [city_id, city, country_id, last_update]
+        when wrong column type:
+          city_id: INTEGER
+          city: STRING
+          country_id: INTEGER
+          last_update: TIMESTAMP

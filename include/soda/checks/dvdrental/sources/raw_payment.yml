@@ -1,0 +1,12 @@
+checks for raw_payment:
+  - schema:
+      fail:
+        when required column missing:
+          [payment_id, customer_id, staff_id, rental_id, amount, payment_date]
+        when wrong column type:
+          payment_id: INTEGER
+          customer_id: INTEGER
+          staff_id: INTEGER
+          rental_id: INTEGER
+          amount: FLOAT64
+          payment_date: TIMESTAMP

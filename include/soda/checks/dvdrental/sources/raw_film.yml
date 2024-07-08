@@ -1,0 +1,33 @@
+checks for raw_film:
+  - schema:
+      fail:
+        when required column missing:
+          [
+            film_id,
+            title,
+            description,
+            release_year,
+            language_id,
+            rental_duration,
+            rental_rate,
+            length,
+            replacement_cost,
+            rating,
+            last_update,
+            special_features,
+            fulltext,
+          ]
+        when wrong column type:
+          film_id: INTEGER
+          title: STRING
+          description: STRING
+          release_year: INTEGER
+          language_id: INTEGER
+          rental_duration: INTEGER
+          rental_rate: FLOAT64
+          length: INTEGER
+          replacement_cost: FLOAT64
+          rating: STRING
+          last_update: TIMESTAMP
+          special_features: STRING
+          fulltext: STRING

@@ -1,0 +1,8 @@
+checks for raw_country:
+  - schema:
+      fail:
+        when required column missing: [country_id, country, last_update]
+        when wrong column type:
+          country_id: INTEGER
+          country: STRING
+          last_update: TIMESTAMP
